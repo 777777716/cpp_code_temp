@@ -3,33 +3,33 @@
 using namespace std;
 
 string NumToPrint[3][10] = {
-    " _ ","   "," _ "," _ ","   "," _ "," _ "," _ "," _ "," _ ",
-    "| |","  |"," _|"," _|","|_|","|_ ","|_ ","| |","|_|","|_|",
-    "|_|","  |","|_ "," _|","  |"," _|","|_|","  |","|_|"," _|",
+    " _ ", "   ", " _ ", " _ ", "   ", " _ ", " _ ", " _ ", " _ ", " _ ",
+    "| |", "  |", " _|", " _|", "|_|", "|_ ", "|_ ", "| |", "|_|", "|_|",
+    "|_|", "  |", "|_ ", " _|", "  |", " _|", "|_|", "  |", "|_|", " _|",
 };
 
 int get_num_count(int num)
 {
-	int count = 0;
-	do{
-	    count ++;
+    int count = 0;
+    do{
+        count ++;
         num /= 10;
-	}
-	while(num > 0);
+    }
+    while(num > 0);
 
-	return count;
+    return count;
 }
 
 int main()
 {
-	int num;
-	cout << "请输入一个整数：" << endl;
-	cin >> num;
+    int num;
+    cout << "请输入一个整数：" << endl;
+    cin >> num;
 
     int count = get_num_count(num);
 
-	int nums[count];
-	for(int i = count - 1; i >= 0; i--)
+    int nums[count];
+    for(int i = count - 1; i >= 0; i--)
     {
         nums[i] = num % 10;
         num /= 10;
@@ -44,6 +44,6 @@ int main()
         cout << endl;
     }
 
-	return 0;
+    return 0;
 }
 
